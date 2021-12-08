@@ -1,4 +1,4 @@
 class ExerciseSerializer < ActiveModel::Serializer
     attributes :id, :name, :target
-    has_many :sessions
+    belongs_to :workout
   end

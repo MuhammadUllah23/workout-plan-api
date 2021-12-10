@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-chest_triceps = {title: "Chest/Tri Day", focus: "Chest and Triceps"}
-leg_day = {title: "Leg Day", focus: "Hamstrings, Quads, Calves"}
-back_bi = {title: "Back/Bi Day", focus: "Back and Biceps"}
-shoulders = {title: "Boulder Shoulders", focus: "Anteriro, Lateral, and Posterior Heads"}
-full_body = {title: "Full Body Recovery", focus: "Chest, Back, Legs"}
+chest_triceps = Workout.create(title: "Chest/Tri Day", focus: "Chest and Triceps")
+leg_day = Workout.create(title: "Leg Day", focus: "Hamstrings, Quads, Calves")
+back_bi = Workout.create(title: "Back/Bi Day", focus: "Back and Biceps")
+shoulders = Workout.create(title: "Boulder Shoulders", focus: "Anteriro, Lateral, and Posterior Heads")
+full_body = Workout.create(title: "Full Body Recovery", focus: "Chest, Back, Legs")
 
-Exercise.new([
+Exercise.create([
     {name: "Bench Press", target: "Chest", sets: "5", reps: "4", workout: chest_triceps},
     {name: "Incline Dumbbell Press", target: "Upper Chest", sets: "4", reps: "8", workout: chest_triceps},
     {name: "Pec Flies", target: "Chest/Alterior Deltoid", sets: "4", reps: "12", workout: chest_triceps},

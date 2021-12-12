@@ -12,4 +12,10 @@ class WorkoutsController < ApplicationController
             render json: {message: "Make sure to fill all inputs"}
         end
     end
+
+    private
+
+    def workout_params
+        params.require(:workout).permit(:title, :focus)
+    end
 end

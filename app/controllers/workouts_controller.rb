@@ -6,8 +6,9 @@ class WorkoutsController < ApplicationController
 
     def create
         @workout = Workout.new(workout_params)
+        # byebug
         if @workout.save
-            render json: @Workout
+            render json: @workout, status: :created, location: @workout
         else
             render json: {message: "Make sure to fill all inputs"}
         end

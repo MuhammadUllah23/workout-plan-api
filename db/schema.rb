@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_084601) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "sets"
-    t.integer "reps"
+    t.integer "reps"rails
     t.index ["workout_id"], name: "index_exercises_on_workout_id"
   end
 

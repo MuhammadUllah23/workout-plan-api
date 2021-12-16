@@ -14,6 +14,13 @@ class WorkoutsController < ApplicationController
         end
     end
 
+    def destroy
+        workout = Workout.find(params[:id])
+        workout.destroy
+        render json: workout
+    end
+
+
     private
 
     def workout_params

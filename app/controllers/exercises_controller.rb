@@ -14,6 +14,13 @@ class ExercisesController < ApplicationController
         end
     end
 
+    def destroy
+        exercise = Exercise.find(params[:id])
+
+        exercise.destroy
+        render json: exercise
+    end
+
     private
 
     def exercise_params

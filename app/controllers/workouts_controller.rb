@@ -20,7 +20,7 @@ class WorkoutsController < ApplicationController
         render json: workout
     end
 
-
+   
     private
 
     def workout_params

@@ -6,7 +6,7 @@ class ExercisesController < ApplicationController
 
     def create
         @exercise = Exercise.new(exercise_params)
-        # byebug
+    
         if @exercise.save
             render json: @exercise, status: :created, location: @exercise
         else

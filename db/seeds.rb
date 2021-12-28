@@ -12,6 +12,7 @@ back_bi = Workout.create(title: "Back/Bi Day", focus: "Back and Biceps")
 shoulders = Workout.create(title: "Boulder Shoulders", focus: "Anteriro, Lateral, and Posterior Heads")
 full_body = Workout.create(title: "Full Body Recovery", focus: "Chest, Back, Legs")
 
+
 Exercise.create([
     {name: "Bench Press", target: "Chest", sets: "5", reps: "4", workout: chest_triceps},
     {name: "Incline Dumbbell Press", target: "Upper Chest", sets: "4", reps: "8", workout: chest_triceps},

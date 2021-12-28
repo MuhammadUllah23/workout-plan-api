@@ -1,4 +1,7 @@
 class Workout < ApplicationRecord
     has_many :exercises
-    has_many :sessions, through: :exercises
+
+    validates :title, presence: true
+    validates :focus, presence: true
+   
 end

@@ -1,4 +1,10 @@
 class Exercise < ApplicationRecord
-  has_many :sessions
   belongs_to :workout
+
+  # validates :name :target :workout_id :sets :reps, presence: true
+  validates :name, presence: true
+  validates :target, presence: true
+  validates :workout_id, presence: true
+  validates :sets, presence: true
+  validates :reps, presence: true
 end

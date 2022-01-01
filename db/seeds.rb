@@ -9,7 +9,7 @@
 chest_triceps = Workout.create(title: "Chest/Tri Day", focus: "Chest and Triceps")
 leg_day = Workout.create(title: "Leg Day", focus: "Hamstrings, Quads, Calves")
 back_bi = Workout.create(title: "Back/Bi Day", focus: "Back and Biceps")
-shoulders = Workout.create(title: "Boulder Shoulders", focus: "Anteriro, Lateral, and Posterior Heads")
+shoulders = Workout.create(title: "Boulder Shoulders", focus: "Alterior, Lateral, and Posterior Heads")
 full_body = Workout.create(title: "Full Body Recovery", focus: "Chest, Back, Legs")
 
 
@@ -19,7 +19,7 @@ Exercise.create([
     {name: "Pec Flies", target: "Chest/Alterior Deltoid", sets: "4", reps: "12", workout: chest_triceps},
     {name: "Tricep Pushdown w/ Rope", target: "Triceps", sets: "4", reps: "8", workout: chest_triceps},
     {name: "Tricep Extensions", target: "Tricep Long Head", sets: "3", reps: "15", workout: chest_triceps},
-    {name: "Squats", target: "Hamsting/Quads/Glutes", sets: "5", reps: "4", workout: leg_day},
+    {name: "Squats", target: "Hamstrings/Quads/Glutes", sets: "5", reps: "4", workout: leg_day},
     {name: "Leg Press", target: "Quads/Glutes", sets: "4", reps: "10", workout: leg_day},
     {name: "Seated Leg Curls", target: "Hamstrings/Glutes", sets: "3", reps: "15", workout: leg_day},
     {name: "Leg Extensions", target: "Quads", sets: "3", reps: "15", workout: leg_day},

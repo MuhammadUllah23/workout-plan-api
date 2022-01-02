@@ -1,4 +1,4 @@
 class Session < ApplicationRecord
-  belongs_to :workout_id
-  belongs_to :exercise_id
+  belongs_to :workout
+  belongs_to :exercise
 end

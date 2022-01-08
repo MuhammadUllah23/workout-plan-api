@@ -7,4 +7,10 @@ class UsersController < ApplicationController
             render json: { error: 'failed to create user' }, status: :unprocessable_entity
         end
     end
+
+    private
+    
+    def user_params
+        params.require(:user).permit(:username, :password, :bio, :avatart)
+    end
 end

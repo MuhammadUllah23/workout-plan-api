@@ -19,6 +19,7 @@ class ApplicationController < ActionController::API
             # JWT.decode => [{ "beef"=>"steak" }, { "alg"=>"HS256" }]
           rescue JWT::DecodeError
             nil
+          end
         end
     end
 

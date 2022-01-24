@@ -1,4 +1,6 @@
 class WorkoutsController < ApplicationController
+    before_action :set_workout, only: [:show, :destroy]
+
     def index
         workouts = Workout.all
         render json: workouts
@@ -22,6 +24,9 @@ class WorkoutsController < ApplicationController
 
    
     private
+    def set_workout
+        @workout = Workout.find(params[:id])
+    end
 
     def workout_params
         params.require(:workout).permit(:title, :focus)

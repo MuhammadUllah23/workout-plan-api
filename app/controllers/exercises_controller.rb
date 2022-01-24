@@ -1,25 +1,19 @@
 class ExercisesController < ApplicationController
     before_action :set_exercise, only: [:destroy]
     def index
-        exercises = Exercise.all
-        render json: exercises
+        @exercises = Exercise.all
+        render json: @exercises
     end
 
     def create
-        @exercise = Exercise.new(exercise_params)
-    
-        if @exercise.save
-            render json: @exercise, status: :created, location: @exercise
-        else
-            render json: {message: "Make sure to fill all inputs"}
-        end
+        @exercise = Exercise.create!(exercise_params)
+        render json: @exercise, status: :created, location: @exercise
+        
     end
 
     def destroy
-        exercise = Exercise.find(params[:id])
-
-        exercise.destroy
-        render json: exercise
+        @exercise.destroy
+        render json: @exercise
     end
 
     private

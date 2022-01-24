@@ -1,25 +1,19 @@
 class WorkoutsController < ApplicationController
-    before_action :set_workout, only: [:show, :destroy]
+    before_action :set_workout, only: [:destroy]
 
     def index
-        workouts = Workout.all
-        render json: workouts
+        @workouts = Workout.all
+        render json: @workouts
     end
 
     def create
         @workout = Workout.new(workout_params)
-        # byebug
-        if @workout.save
-            render json: @workout, status: :created, location: @workout
-        else
-            render json: {message: "Make sure to fill all inputs"}
-        end
+        render json: @workout, status: :created, location: @workout
     end
 
     def destroy
-        workout = Workout.find(params[:id])
-        workout.destroy
-        render json: workout
+        @workout.destroy
+        render json: @workout
     end
 
    

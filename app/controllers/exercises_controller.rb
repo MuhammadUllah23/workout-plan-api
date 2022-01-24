@@ -1,4 +1,5 @@
 class ExercisesController < ApplicationController
+    before_action :set_exercise, only: [:destroy]
     def index
         exercises = Exercise.all
         render json: exercises
@@ -22,6 +23,9 @@ class ExercisesController < ApplicationController
     end
 
     private
+    def set_exercise
+        @exercise = Exercise.find(params[:id])
+    end
 
     def exercise_params
         params.require(:exercise).permit(:name, :target, :sets, :reps, :workout_id )

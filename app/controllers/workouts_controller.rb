@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-    before_action :set_workout, only: [:destroy]
+    before_action :set_workout, only: [:destroy, :update]
 
     def index
         @workouts = Workout.all
@@ -8,6 +8,11 @@ class WorkoutsController < ApplicationController
 
     def create
         @workout = Workout.create!(workout_params)
+        render json: @workout, status: :created, location: @workout
+    end
+
+    def update
+        @workout.update!(workout_params)
         render json: @workout, status: :created, location: @workout
     end
 

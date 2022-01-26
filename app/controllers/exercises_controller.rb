@@ -1,5 +1,5 @@
 class ExercisesController < ApplicationController
-    before_action :set_exercise, only: [:destroy]
+    before_action :set_exercise, only: [:destroy, :update]
     def index
         @exercises = Exercise.all
         render json: @exercises
@@ -14,6 +14,11 @@ class ExercisesController < ApplicationController
     def destroy
         @exercise.destroy
         render json: @exercise
+    end
+
+    def update
+        @exercise.update!(exercise_params)
+        render json: @exercise, status: :created, location: @exercise
     end
 
     private
